@@ -1,8 +1,7 @@
 
 
-### Chat/Messaging App Light and Dark Theme Final UI
+### Chat App UI
+![image](https://user-images.githubusercontent.com/19634148/131675279-dd6c1537-ef1f-4047-a779-388d93c1328d.png)
 
-![Preview](/gif.gif)
 
-![App UI](/ui.png)
-# chat-flutter
+
