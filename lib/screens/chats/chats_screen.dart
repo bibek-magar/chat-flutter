@@ -19,26 +19,29 @@ class _ChatsScreenState extends State<ChatsScreen> {
         backgroundColor: kPrimaryColor,
         child: Icon(Icons.person_add_alt_1, color: Colors.white),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        currentIndex: _selectedIndex,
-        onTap: (value) {
-          setState(() {
-            _selectedIndex = value;
-          });
-        },
-        items: [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.messenger), label: "Messages"),
-          BottomNavigationBarItem(icon: Icon(Icons.people), label: "People"),
-          BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
-          BottomNavigationBarItem(
-              icon: CircleAvatar(
-                backgroundImage: AssetImage("assets/images/user_2.png"),
-              ),
-              label: "Profile")
-        ],
-      ),
+      bottomNavigationBar: buildBottomNavigationBar(),
+    );
+  }
+
+  BottomNavigationBar buildBottomNavigationBar() {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      currentIndex: _selectedIndex,
+      onTap: (value) {
+        setState(() {
+          _selectedIndex = value;
+        });
+      },
+      items: [
+        BottomNavigationBarItem(icon: Icon(Icons.messenger), label: "Messages"),
+        BottomNavigationBarItem(icon: Icon(Icons.people), label: "People"),
+        BottomNavigationBarItem(icon: Icon(Icons.call), label: "Calls"),
+        BottomNavigationBarItem(
+            icon: CircleAvatar(
+              backgroundImage: AssetImage("assets/images/user_2.png"),
+            ),
+            label: "Profile")
+      ],
     );
   }
 
